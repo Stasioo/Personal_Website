@@ -19,11 +19,55 @@ body {
     color: var(--secondary);
     font-family: AGGmedium;   
 }
+/*----Stylizations for fonts--------*/
+h1 {
+    font-size: 4rem;
+    font-weight: normal;
+    font-family: AGGDemiReg;
+}
 
+h2 {
+    color: var(--primary);
+    -webkit-text-stroke-color: var(--secondary);
+    -webkit-text-stroke-width: 2px;
+    font-size: 4rem;
+    font-weight: normal;
+    font-family: AGGDemiReg;
+}
+p {
+
+}
+/*---Changing links to be inherit color from parent----*/
 a {
     color: inherit;
     text-decoration: none;
 }
+
+/*----layout for desktop/laptop-------*/
+.page {
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.mainContent {
+    display: flex;
+}
+
+.testImage {
+    float: right;
+    max-width: 70%;
+}
+
+/*----layout for mobile-------*/
+@media (max-width: 600px) {
+    .mainContent {
+        flex-direction: column;
+    }
+}
+
 /* OLD
 .page {
     height: 90vh;
