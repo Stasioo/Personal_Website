@@ -21,6 +21,7 @@ body {
 }
 /*----Stylizations for fonts--------*/
 h1 {
+    margin-bottom: -3.3rem;
     font-size: 4rem;
     font-weight: normal;
     font-family: AGGDemiReg;
@@ -54,17 +55,26 @@ a {
 
 .mainContent {
     display: flex;
+    margin-top: 10rem;
+}
+.content1{
+    margin-top: 5rem;
 }
 
 .testImage {
     float: right;
-    max-width: 70%;
+    max-width: 100%;
 }
 
 /*----layout for mobile-------*/
 @media (max-width: 600px) {
     .mainContent {
         flex-direction: column;
+        margin-top: 0rem;
+    }
+
+    .content1 {
+        margin-top: 1rem;
     }
 }
 
