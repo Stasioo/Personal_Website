@@ -6,9 +6,13 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="hamburgerMenu.css" />
+
 </head>
 <body>
     <div class="page">
+
+        <!--Menu Navigation(hamburger style that let's you choose to go to other web pages)-->
         <div class="menu-wrapper">
             <input type="checkbox" class="toggle"  />
 
@@ -18,25 +22,30 @@
 
             <div class="menu">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Resume</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
-                    <li>Test title</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class = "content">
-            <h1>
-                Test title<span>MENU</span>
-            </h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora alias laudantium qui porro sequi dicta dignissimos nulla at quisquam. Incidunt aperiam dolor quibusdam maiores officia fugit ipsa consequatur perspiciatis!
-            </p>
+        <!--Actual contents of home page-->
+
+        <div class ="content">
+            <div class = "column">
+                <h1>Stas Kobylarz</h1>
+                <h2>Computer Science</h2>
+                <h2>Student</h2>
+            </div>
+            <img  src= "images/testImage.png">
         </div>
 
     </div>
+    
+    <footer>
+        <p>© 2020 Stas Kobylarz</p>
+    </footer>
 </body>
 </html>

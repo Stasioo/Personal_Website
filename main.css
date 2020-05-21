@@ -1,179 +1,87 @@
 :root {
-    --primary: #FFCE00;
-    --secondary: #171717;
-    --light: #F3F3F3;
+    --primary: #171717;
+    --secondary: #F3F3F3;
+    --c1: #e3e8df;
+    --c2: #ffc070;
+    --c3: #7ccce7;
+    --c4: #6497e4;
+    --c5: #e880ce;
+    --c6: #c94c4e;
     --font-1: 'ITC Avant Garde Gothic Medium', sans-serif;
+    --font-2: 'ITC Avant Garde Gothic LT Demi Regular', sans-serif;
 }
 
+@font-face {
+    font-family: AGGmedium;
+    src: url(fonts/ITC\ Avant\ Garde\ Gothic\ Medium.otf);
+}
+@font-face {
+    font-family: AGGDemiReg;
+    src: url(fonts/ITC\ Avant\ Garde\ Gothic\ LT\ Demi\ Regular.otf);
+}
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--light);
-    font-family: var(--font-1);
+    background-color: var(--primary);
+    font-family: AGGDemiReg;
 }
 
 .page {
-    width: 100vw;
-    height: 100vh;
+    height: 90vh;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 50px;
     align-items: center;
     position: relative;
-    padding: 15px;
     box-sizing: border-box;
+
 }
 .content {
-    width: 100%;
-    max-width: 768px;
-
+    display: flex;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: red;
 }
 
 h1 {
-    color: var(--primary);
-    font-size: 42px;
-    font-weight: 900;
-    text-align: center;
+    color: var(--secondary);
+    font-weight: normal;
+    font-size: 5rem;
+    margin-bottom: -3rem;
 }
 
-h1 span {
-    color: var(--secondary);
-    font-weight: 300;
+h2 {
+    color: var(--primary);
+    -webkit-text-stroke-color: var(--secondary);
+    -webkit-text-stroke-width: 2px;
+    font-size: 3.5rem;
+    margin-bottom: -3rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: greenyellow;
+    justify-content: center;
 }
 
 p {
+    /*font-size: 30px;*/
     color: var(--secondary);
 }
 
-.menu-wrapper {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    width: 50px;
-    height: 50px;
-    box-sizing: border-box;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.menu-wrapper .toggle {
-    position: absolute;
-    width: 50px;
-    height: 50px;
+/*---footer---*/
 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    z-index: 999;
-    cursor: pointer;
-    opacity: 0;
-}
-
-/*hamburger icon css styling*/
-.menu-wrapper .hamburger {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 998;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    box-sizing: border-box;
-    padding: 10px;
-    transition: all 0.3s ease;
+footer {
+    padding: 20px;
+    width: 100%;
     
 }
 
-.menu-wrapper .hamburger .bar{
-    position: relative;
-    width: 100%;
-    height: 3px;
-    background: var(--secondary);
-    z-index: 5;
-
-    transition: all 0.2s linear;
-}
-
-.menu-wrapper .hamburger .bar::before,
-.menu-wrapper .hamburger .bar::after{
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 100%;
-    height: 3px;
-    background: var(--secondary);
-    transition: all 0.2s linear;
-
-}
-
-.menu-wrapper .hamburger .bar::after{
-    top: 10px;
-}
 
 
-.menu-wrapper .toggle:hover + .hamburger {
-    transform: rotate(-25deg);
-}
-
-.menu-wrapper .toggle:checked + .hamburger {
-    transform: rotate(45deg);
-}
-
-.menu-wrapper .toggle:checked:hover + .hamburger {
-    transform: rotate(135deg);
-}
-
-
-
-.menu-wrapper .toggle:checked + .hamburger .bar::before,
-.menu-wrapper .toggle:checked + .hamburger .bar::after {
-    top: 0;
-    transform: rotate(90deg);
-}
-
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    
-    opacity: 0;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    background: rgba(25, 25, 25, 0.85);
-    z-index: 1;
-    transition: opacity 0.8s;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.menu ul li {
-    color: var(--light);
-    font-size: 50px;
-    font-weight: 600;
-    font-family: var(--font-1);
-    list-style-type: none;
-    margin: 0;
-    cursor: pointer;
-    box-sizing: 15px;
-    border-bottom: 2px solid transparent;
-}
-
-.menu ul li:hover {
-    color: var(--primary);
-    border-bottom: 2px solid var(--primary);
-}
-
-.menu-wrapper .toggle:checked + .hamburger + .menu {
-    opacity: 1;
-    width: 100vw;
-    height: 100vh;
-}
