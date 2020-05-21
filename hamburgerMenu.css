@@ -108,7 +108,7 @@
 .menu ul li {
     color: var(--secondary);
     font-size: 50px;
-    font-family: var(--font-1);
+    font-family: AGGmedium;
     list-style-type: none;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -119,26 +119,21 @@
 }
 
 .menu ul li:hover {
-    color: var(--c1);
-    border-bottom: 3px solid var(--c1);
+    border-bottom: 3px solid;
     float: left;
 }
 
 .menu ul li:nth-child(2):hover {
-    color: var(--c2);
-    border-bottom: 3px solid var(--c2);
+    border-bottom: 3px solid;
 }
 .menu ul li:nth-child(3):hover {
-    color: var(--c3);
-    border-bottom: 3px solid var(--c3);
+    border-bottom: 3px solid ;
 }
 .menu ul li:nth-child(4):hover {
-    color: var(--c4);
-    border-bottom: 3px solid var(--c4);
+    border-bottom: 3px solid;
 }
 .menu ul li:nth-child(5):hover {
-    color: var(--c5);
-    border-bottom: 3px solid var(--c5);
+    border-bottom: 3px solid var;
 }
 
 

@@ -1,16 +1,11 @@
 :root {
     --primary: #171717;
     --secondary: #F3F3F3;
-    --c1: #e3e8df;
-    --c2: #ffc070;
-    --c3: #7ccce7;
-    --c4: #6497e4;
-    --c5: #e880ce;
-    --c6: #c94c4e;
     --font-1: 'ITC Avant Garde Gothic Medium', sans-serif;
     --font-2: 'ITC Avant Garde Gothic LT Demi Regular', sans-serif;
 }
 
+/*---------------fonts-----------------------*/
 @font-face {
     font-family: AGGmedium;
     src: url(fonts/ITC\ Avant\ Garde\ Gothic\ Medium.otf);
@@ -21,9 +16,15 @@
 }
 body {
     background-color: var(--primary);
-    font-family: AGGDemiReg;
+    color: var(--secondary);
+    font-family: AGGmedium;   
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* OLD
 .page {
     height: 90vh;
 
@@ -64,24 +65,20 @@ h2 {
     border-color: greenyellow;
     justify-content: center;
 }
-
 p {
-    /*font-size: 30px;*/
     color: var(--secondary);
 }
-
 a {
     color: inherit;
     text-decoration: none;
 }
 
-/*---footer---*/
-
 footer {
     padding: 20px;
-    width: 100%;
+    width: 90%;
     
 }
+*/
 
 
 
