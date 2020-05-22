@@ -36,7 +36,7 @@ h2 {
     font-family: AGGDemiReg;
 }
 p {
-
+    font-size:  1.5rem;
 }
 /*---Changing links to be inherit color from parent----*/
 a {
@@ -58,35 +58,37 @@ a:hover {
 
 .mainContent {
     display: flex;
-    margin-top: 10rem;
-}
-.content1{
-    margin-top: 5rem;
+    flex-direction: column;
 }
 
-.testImage {
-    float: right;
-    max-width: 100%;
+.aboutmeImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
 }
-
+.content1 {
+    display: flex;
+    flex-direction: row;
+}
+.content2 {
+    margin: 1.5em;
+}
+.text1 {
+    margin: 1.5em;
+}
 /*----layout for mobile-------*/
 /*----On screens that are 768px wide or less------*/
 @media (max-width: 768px) {
-    .mainContent {
-        flex-direction: column;
-        margin-top: 0rem;
-        margin:1rem;
-    }
-
     .content1 {
-        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
     }
-
 }
 /*----On screens that are 1115px wide or less------*/
 @media (max-width: 1115px) {
-    
     .content1 {
-        margin-top: 0;
+        display: flex;
+        flex-direction: column;
     }  
 }

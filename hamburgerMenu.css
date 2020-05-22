@@ -97,7 +97,7 @@
     width: 0;
     height: 0;
     overflow: hidden;
-    background: rgba(94, 94, 94, 0.85);
+    background: rgba(23, 23, 23, 0.85);
     z-index: 1;
     transition: opacity 0.8s;
     display: flex;
@@ -105,37 +105,20 @@
     align-content: center;
 }
 
+.menu ul {
+    padding-inline-start: 0em;
+}
+
 .menu ul li {
     color: var(--secondary);
-    font-size: 50px;
+    font-size: 3rem;
     font-family: AGGmedium;
     list-style-type: none;
     margin-top: 10px;
     margin-bottom: 10px;
     cursor: pointer;
     box-sizing: 15px;
-    transition: all 0.25s linear;
-
 }
-
-.menu ul li:hover {
-    border-bottom: 3px solid;
-    float: left;
-}
-
-.menu ul li:nth-child(2):hover {
-    border-bottom: 3px solid;
-}
-.menu ul li:nth-child(3):hover {
-    border-bottom: 3px solid ;
-}
-.menu ul li:nth-child(4):hover {
-    border-bottom: 3px solid;
-}
-.menu ul li:nth-child(5):hover {
-    border-bottom: 3px solid var;
-}
-
 
 .menu-wrapper .toggle:checked + .hamburger + .menu {
     opacity: 1;
