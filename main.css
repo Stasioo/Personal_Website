@@ -70,23 +70,32 @@ a:hover {
 }
 
 /*----layout for mobile-------*/
+/*----On screens that are 1115px wide or less------*/
+@media (max-width: 1115px) {
+    
+    .content1 {
+        margin-top: 0;
+    }
+    
+    .testImage {
+        padding: 70px 0;
+    }
+}
 /*----On screens that are 768px wide or less------*/
 @media (max-width: 768px) {
     .mainContent {
         flex-direction: column;
         margin-top: 0rem;
         margin:1rem;
+        margin-bottom: 8rem;
+
     }
 
     .content1 {
         margin-top: 1rem;
     }
+    .testImage {
+        padding: 0px 0;
+    }
 
-}
-/*----On screens that are 1115px wide or less------*/
-@media (max-width: 1115px) {
-    
-    .content1 {
-        margin-top: 0;
-    }  
 }
