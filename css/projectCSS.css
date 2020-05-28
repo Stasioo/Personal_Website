@@ -45,12 +45,6 @@ h3 {
     font-family: AGGDemiReg;
     position: absolute;
     background-color: var(--primary);
-    padding-top: 0.7rem;
-    padding-left: 1rem;
-    padding-right: 0.8rem;
-
-    
-
 }
 p {
     font-family: AGGmedium;
@@ -129,9 +123,6 @@ a:hover {
         font-size:  1.3rem;
     }
 
-    h3 {
-        padding-right: 0.2rem;
-    }
 }
 /*----On screens that are 1115px wide or less------*/
 @media (max-width: 1115px) {
