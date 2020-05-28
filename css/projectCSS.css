@@ -43,6 +43,10 @@ h3 {
     font-size: 3.4rem;
     font-weight: normal;
     font-family: AGGDemiReg;
+    position: absolute;
+    background-color: var(--primary);
+    padding: 1rem;
+
 }
 p {
     font-family: AGGmedium;
@@ -104,18 +108,11 @@ a:hover {
 }
 .imgText {
     position: relative;
-    z-index: -1;
-    left: 55px;
-    bottom: -50px;
-    padding: 1rem;
-    background-color: var(--primary);
 }
 
 
 /*----layout for mobile-------*/
-@media (max-width: 768px) { 
 
-}
 
 /*----On screens that are 768px wide or less------*/
 @media (max-width: 768px) {
