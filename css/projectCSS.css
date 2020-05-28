@@ -128,6 +128,10 @@ a:hover {
         font-family: AGGmedium;
         font-size:  1.3rem;
     }
+
+    h3 {
+        padding-right: 0.2rem;
+    }
 }
 /*----On screens that are 1115px wide or less------*/
 @media (max-width: 1115px) {
