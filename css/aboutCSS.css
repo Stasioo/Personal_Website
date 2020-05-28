@@ -57,6 +57,7 @@ a:hover {
     margin: 0 auto;
 }
 .title {
+    padding-top: 2rem;
     margin: 1rem;
 }
 .mainContent {
@@ -88,6 +89,10 @@ footer{
     .content1 {
         display: flex;
         flex-direction: column;
+    }
+    p {
+        font-family: AGGmedium;
+        font-size:  1.3rem;
     }
 }
 /*----On screens that are 1115px wide or less------*/

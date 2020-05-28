@@ -1,0 +1,142 @@
+:root {
+    --primary: #171717;
+    --secondary: #F3F3F3;
+    --font-1: 'ITC Avant Garde Gothic Medium', sans-serif;
+    --font-2: 'ITC Avant Garde Gothic LT Demi Regular', sans-serif;
+}
+
+/*---------------fonts-----------------------*/
+@font-face {
+    font-family: AGGmedium;
+    src: url(fonts/ITC\ Avant\ Garde\ Gothic\ Medium.otf);
+}
+@font-face {
+    font-family: AGGDemiReg;
+    src: url(fonts/ITC\ Avant\ Garde\ Gothic\ LT\ Demi\ Regular.otf);
+}
+body {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-family: AGGmedium;   
+}
+/*----Stylizations for fonts--------*/
+h1 {
+    margin-bottom: -3.3rem;
+    font-size: 4rem;
+    font-weight: normal;
+    font-family: AGGDemiReg;
+}
+
+h2 {
+    color: var(--primary);
+    -webkit-text-stroke-color: var(--secondary);
+    -webkit-text-stroke-width: 2px;
+    font-size: 4rem;
+    font-weight: normal;
+    font-family: AGGDemiReg;
+}
+h3 {
+    margin: 0;
+    color: var(--primary);
+    -webkit-text-stroke-color: var(--secondary);
+    -webkit-text-stroke-width: 1.5px;
+    font-size: 3.4rem;
+    font-weight: normal;
+    font-family: AGGDemiReg;
+}
+p {
+    font-family: AGGmedium;
+    font-size:  1.5rem;
+}
+/*---Changing links to be inherit color from parent----*/
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.25s;
+}
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--secondary);
+}
+
+/*----layout for desktop/laptop-------*/
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.title {
+    padding-top: 2rem;
+    margin: 1rem;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: row;
+
+    margin: 1rem;
+
+}
+
+.image-grid {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 300px;
+}
+.image-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.image-item:hover {
+    transition: 1s;
+    transform:scale(1.05);
+
+
+}
+.imgText {
+    position: relative;
+    z-index: -1;
+    left: 55px;
+    bottom: -50px;
+    padding: 1rem;
+    background-color: var(--primary);
+}
+
+
+/*----layout for mobile-------*/
+@media (max-width: 768px) { 
+
+}
+
+/*----On screens that are 768px wide or less------*/
+@media (max-width: 768px) {
+    .content1 {
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        font-family: AGGmedium;
+        font-size:  1.3rem;
+    }
+}
+/*----On screens that are 1115px wide or less------*/
+@media (max-width: 1115px) {
+    .content1 {
+        display: flex;
+        flex-direction: column;
+    }  
+
+}
+
+footer {
+    margin-top: 1rem;
+}
