@@ -43,7 +43,6 @@ h3 {
     font-size: 3.4rem;
     font-weight: normal;
     font-family: AGGDemiReg;
-    position: absolute;
     background-color: var(--primary);
 }
 p {

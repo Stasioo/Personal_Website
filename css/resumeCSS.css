@@ -64,6 +64,11 @@ a:hover {
     display: flex;
     flex-direction: column;
 }
+.pdfFile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .aboutmeImage{
     align-self: center;
@@ -83,6 +88,7 @@ a:hover {
 footer{
     margin-left: 1rem;
 }
+
 /*----layout for mobile-------*/
 /*----On screens that are 768px wide or less------*/
 @media (max-width: 768px) {
