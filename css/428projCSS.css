@@ -1,0 +1,151 @@
+:root {
+    --primary: #171717;
+    --secondary: #F3F3F3;
+    --font-1: 'ITC Avant Garde Gothic Medium', sans-serif;
+    --font-2: 'ITC Avant Garde Gothic LT Demi Regular', sans-serif;
+}
+
+/*---------------fonts-----------------------*/
+@font-face {
+    font-family: AGGmedium;
+    src: url(fonts/ITC\ Avant\ Garde\ Gothic\ Medium.otf);
+}
+@font-face {
+    font-family: AGGDemiReg;
+    src: url(fonts/ITC\ Avant\ Garde\ Gothic\ LT\ Demi\ Regular.otf);
+}
+body {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-family: AGGmedium;   
+}
+/*----Stylizations for fonts--------*/
+h1 {
+    margin-bottom: -3.3rem;
+    font-size: 4rem;
+    font-weight: normal;
+    font-family: AGGDemiReg;
+}
+
+h2 {
+    color: var(--primary);
+    -webkit-text-stroke-color: var(--secondary);
+    -webkit-text-stroke-width: 2px;
+    font-size: 4rem;
+    font-weight: normal;
+    font-family: AGGDemiReg;
+}
+h3 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: AGGDemiReg;
+}
+p {
+    font-family: AGGmedium;
+    font-size:  1.5rem;
+}
+
+li {
+    font-size: 1.2rem;
+}
+/*---Changing links to be inherit color from parent----*/
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.25s;
+}
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--secondary);
+}
+
+/*----*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 1.5rem;
+  }
+  /*
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }*/
+/*----layout for desktop/laptop-------*/
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.title {
+    padding-top: 2rem;
+    margin: 1rem;
+}
+.mainContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.List428 {
+    font-family: AGGmedium;
+    font-size:  1.5rem;
+}
+
+.githubLink {
+    color:aqua;
+    
+}
+.aboutmeImage{
+    align-self: center;
+    max-width: 100%;
+    margin: 1rem;
+}
+.content1 {
+    display: flex;
+    flex-direction: row;
+}
+.content2 {
+    margin: 1rem;
+}
+.text1 {
+    margin: 1.5rem;
+}
+footer{
+    margin-left: 1rem;
+}
+/*----layout for mobile-------*/
+/*----On screens that are 768px wide or less------*/
+@media (max-width: 768px) {
+    .content1 {
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        font-family: AGGmedium;
+        font-size:  1.3rem;
+    }
+}
+/*----On screens that are 1115px wide or less------*/
+@media (max-width: 1115px) {
+    .aboutmeImage {
+        max-width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content1 {
+        display: flex;
+        flex-direction: column;
+    }  
+    .content2 {
+        margin: 1rem;
+    }
+    .text1 {
+        margin: 1rem;
+    }
+}

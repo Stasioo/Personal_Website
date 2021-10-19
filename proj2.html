@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/428projCSS.css" />
+    <link rel="stylesheet" href="css/hamburgerMenu.css" />
+
+</head>
+<body>
+    <div class="page">
+
+        <!--Menu Navigation-->
+        <div class="menu-wrapper">
+            <input type="checkbox" class="toggle"  />
+
+            <div class="hamburger">
+                <div class="bar"></div>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="CS428.html">CS428</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    <!--Content of about page-->
+    <div class="container">
+        <div class = "title">
+            <h1>CS 428</h1>
+            <h2>Project 2 - (Don't Fear)The Reaper</h2>
+            <div class = githubLink><a target="_blank" rel="noopener noreferrer" href= "https://github.com/Stasioo/CS428Project2">Github Link</a></div>
+        </div>
+        <div class = "mainContent">
+            <img src="images/CS428Proj2Images/thumbnail.PNG">
+            <h3>Introduction</h3>
+            <p>With this project, we were tasked to create a Unity application that would place the player in a virtual reality office space designed to help them with a phobia. We were to augment the space with models, sounds, lights, and other interactive objects to help them deal with their specific phobia. The phobia that I ended up choosing to help take care of is clowns. Within my application, since I had a lot of trouble finding 3D models of clowns that were free and in a usable file format, I designed the office space to have items related to clowns sprawled around the space left by the office workers. Such items include balloons, juggling pins, clown shoes, etc. This allows the user that is walking throughout this space to face their fear of clowns by interacting with such items, letting them get a closer look and interact with them in order to realize that clowns aren't so bad at all. Seeing all of the items in the space, lets the user visualize a clown in their mind, and come face to face with their phobia.</p>
+            <h3>How to build and run the app</h3>
+            <p>In order to build the app and run it properly, you are going to need several tools installed prior to building it.</p>
+            <p>This app requires the following (For VRTK, you don't actually have to install anything from the site):</p>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://unity3d.com/get-unity/download/archive">Unity v2019.4.28f1</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://unity3d.com/get-unity/download">Unity Hub</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://git-scm.com/">Git</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.vrtk.io/">VRTK 4</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.blender.org/">Blender 2.93.5</a></li>
+            <li>An Oculus Quest 1 or 2</a></li>
+
+            <p>Once you have all of the apps listed above installed, you can now follow these build instructions in order to build this app on your own personal computer:</p>
+            <ol>
+                <img src="images/CS428Proj2Images/instr1.PNG">
+                <li>Starting firstly, open up the GitHub repo link to the application, and either clone repo using git or download the zip file. If you are cloning the repository, utilize the command "git clone https://github.com/Stasioo/CS428Project2.git" in your command terminal in a folder that you would like to keep it. With the zip file, all you have to do is extract the contents to the desired folder.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr2.PNG">
+                <li>Once you have the project saved on your PC, the next step is to open up Unity Hub. If you do not have Unity V2019.4.28f1 installed, make sure you do that first by going to the Unity archive site and searching for that version, and installed it from there.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr3.PNG"><br>
+                <img src="images/CS428Proj2Images/instr3_.PNG">
+                <li>Once you have that version installed, the next step is to add the project to Unity Hub, which you can do by clicking on the "ADD" button found on the top right under the "Projects" tab. Look for the folder that has the contents of the application. Make sure you are inside the folder containing folders such as Assets, Library, obj, packages, etc. Once you have added it, it will appear in the "Projects" tab of Unity Hub.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr4.PNG">
+                <li>The next step is to open the project, and once you have done that, under the Project Tab found on the bottom left, look under the Assets/Scenes folder, and find the "ScareCoOffices.unity" scene file if that scene isn't currently opened up by default.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr5.PNG">
+                <li>Now a couple of more checks are needed to make sure the build process will come cleanly. Firstly, we need to make sure Virtual Reality is supported by going under Edit -> Project Settings, it will bring up a new window,  and under the Player tab, and under Deprecated Settings that Virtual Reality Supported is ticked off and the Oculus SDK is shown. If not, tick it and press the plus sign to add the Oculus SDK.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr6-1.PNG"><br>
+                <img src="images/CS428Proj2Images/instr6-2.PNG">
+                <li> Additionally, you need to make sure you have necessary VRTK packages installed if they weren't in the first place. You can do this by going to your application folder and under the Packages folder and look for the manifest.json file. Opening it in a text editor, double-check to see if you have these lines:</li>
+                <br>"io.extendreality.tilia.mutators.collisionignorer.unity": "1.2.7",<br>
+                "io.extendreality.tilia.camerarigs.spatialsimulator.unity": "1.4.12",<br>
+                "io.extendreality.tilia.camerarigs.trackedalias.unity": "1.6.6",<br>
+                "io.extendreality.tilia.camerarigs.unityxr": "1.5.5",<br>
+                "io.extendreality.tilia.indicators.objectpointers.unity": "1.7.12",<br>
+                "io.extendreality.tilia.input.unityinputmanager": "1.4.5",<br>
+                "io.extendreality.tilia.interactions.controllables.unity": "1.13.0",<br>
+                "io.extendreality.tilia.interactions.interactables.unity": "1.20.1",<br>
+                "io.extendreality.tilia.interactions.spatialbuttons.unity": "1.3.11",<br>
+                "io.extendreality.tilia.locomotors.climbing.unity": "1.7.26",<br>
+                "io.extendreality.tilia.locomotors.teleporter.unity": "1.6.7",<br>
+                "io.extendreality.tilia.locomotors.teleporttargets.unity": "1.1.11",<br>
+                "io.extendreality.tilia.trackers.pseudobody.unity": "1.6.22"<br>
+            
+                If not, add whichever ones that you do not have.<br>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr7.PNG"><br>
+                <img src="images/CS428Proj2Images/instr7-1.PNG">
+                <li>Additionally, make sure within your Unity Hierarchy that CameraRigs.UnityXR is enabled whilst the CameraRigs.SpatialSimulator is disabled.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr8.PNG">
+                <li>Once you have done that, now you can go under the File -> Build Settings to make it. Under the Build Settings window, make sure you have Scenes/ScareCoOffices selected as the scene for the build. Set the Build Platform to be Android so you can deploy it on the Oculus Headset. Once you have switched to that platform. You can either choose to build or Build And Run. If you have the Oculus Quest headset connected via USB cable, it will show up in the list, and you may click on Build and Run.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr9-1.jpg"><br>
+                <img src="images/CS428Proj2Images/instr9-2.jpg">
+                <li>Once you have done that, which may take a while if it's the first time building on the Oculus Quest headset, you may disconnect the USB cable, and use the headset. Whilst using it, go on the application menu, and in the upper right of the big menu, click on all Applications, and at the bottom of the list click on the application to start it.</li>
+            </ol>
+            <h3>Assets that I found</h3>
+            <p>*Note: I did not list what assets fit the unique model requirement as there is more models that fit this requirement*</p>
+            <table>
+                <tr>
+                    <th>Asset Name</th>
+                    <th>Link</th>
+                    <th>Requirement?</th>
+                    <th>If so, which one?</th>
+                </tr>
+                <tr>
+                    <th>AllSteel Scout Chair<br><img src="images/CS428Proj2Images/chair.PNG">
+                    </th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://www.allsteeloffice.com/design-resources/resources/2d-3d-models?brand=Allsteel">Link</a></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>AllSteel Cabinets<br><img src="images/CS428Proj2Images/cabinet.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://www.allsteeloffice.com/design-resources/resources/2d-3d-models?brand=Allsteel">Link</a></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>Potted Plant<br><img src="images/CS428Proj2Images/plant.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/potted-plant-household-props-challenge-day-26-4176123e70e44426be3ba0e65587af90">Link</a></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>CRT Monitor<br><img src="images/CS428Proj2Images/crt.png"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/crt-monitor-e2dd2887a8904e4fa3d5a32e2935adb9">Link</a></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>Xerox Printer<br><img src="images/CS428Proj2Images/printer.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://www.cgtrader.com/free-3d-models/electronics/other/low-poly-xerox-printer">Link</a></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>Coffee Table<br><img src="images/CS428Proj2Images/table.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://www.cgtrader.com/free-3d-models/furniture/table/coffee-table-de919257-4941-407d-a797-97e61566db0f">Link</a></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>Modular Sofa Couch<br><img src="images/CS428Proj2Images/couch.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://www.cgtrader.com/items/2010559/download-page">Link</a></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>Fortnite Joker Model<br><img src="images/CS428Proj2Images/jokerF.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/fortnite-joker-version-2-ffd5ad863d9147068b3c5518c079f018">Link</a></th>
+                    <th>Yes</th>
+                    <th>1. Animated/movable</th>
+                </tr>
+                <tr>
+                    <th>Little PennyWise Toy<br><img src="images/CS428Proj2Images/penny.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/little-pennywise-toy-like-4deba21f683a40fb86d411c90f24714a">Link</a></th>
+                    <th>Yes</th>
+                    <th>1.grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Balloon Dog and Snake<br><img src="images/CS428Proj2Images/snake.PNG"><img src="images/CS428Proj2Images/dog.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/balloon-dog-b06b4072e4fb4491a2318bcee2de91e6">Link</a></th>
+                    <th>Yes</th>
+                    <th>2. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Koko The Clown<br><img src="images/CS428Proj2Images/koko.png"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/koko-the-clown-4736e17686434abf88afab6194819537">Link</a></th>
+                    <th>Yes</th>
+                    <th>3. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Jeck Terror (DuesselDorf Carnival 2016)<br><img src="images/CS428Proj2Images/dussel.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/jeck-terror-duesseldorf-carnival-2016-6a9007113e924faeba4afd3b544b13e7">Link</a></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>Circus Tent<br><img src="images/CS428Proj2Images/tent.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/circus-a1f75b1946b5476e80c36e450ae20294">Link</a></th>
+                    <th>Yes</th>
+                    <th>4. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Joker Phoenix Bust<br><img src="images/CS428Proj2Images/jokerBust.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://www.cgtrader.com/free-3d-print-models/art/sculptures/joaquin-phoenix-joker-bust">Link</a></th>
+                    <th>Yes</th>
+                    <th>5. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Clown Hat<br><img src="images/CS428Proj2Images/hat.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/clown-hat-0f5ef2e6205c4b438c593a979a3ccdae">Link</a></th>
+                    <th>Yes</th>
+                    <th>6. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Concrete Floor Texture<br><img src="images/CS428Proj2Images/concrete.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://architextures.org/">Link</a></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>Clown Horn by inplay</th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/inplay/sounds/251611/">Link</th>
+                    <th>Yes</th>
+                    <th>1. Sound</th>
+                </tr>
+                <tr>
+                    <th>Bubble Pop by DuffyBro</th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/DuffyBro/sounds/319107/">Link</th>
+                    <th>Yes</th>
+                    <th>2. Sound</th>
+                </tr>
+                <tr>
+                    <th>Circus Music Sound by metrostock99</th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/metrostock99/sounds/514484/">Link</th>
+                    <th>Yes</th>
+                    <th>3. Sound</th>
+                </tr>
+                <tr>
+                    <th>Printer Noise bythe.bored.engineer69</th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/the.bored.engineer69/sounds/488211/">Link</th>
+                    <th>Yes</th>
+                    <th>4. Sound</th>
+                </tr>
+                <tr>
+                    <th>Office Noises Ambience by Chelly01</th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/Chelly01/sounds/541117/">Link</th>
+                    <th>Yes</th>
+                    <th>1. Ambience sound</th>
+                </tr>
+                <tr>
+                    <th>Joker Laugh by bulbastre</th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/bulbastre/sounds/103987/">Link</a></th>
+                    <th>Yes</th>
+                    <th>1. Ambience sound</th>
+                </tr>
+            </table>
+            <h3>Assets that I made</h3>
+            <table>
+                <tr>
+                    <th>Asset Name</th>
+                    <th>Requirement?</th>
+                    <th>If so, which one?</th>
+                </tr>
+                <tr>
+                    <th>Balloon<br><img src="images/CS428Proj2Images/balloons.PNG"></th>
+                    <th>Yes</th>
+                    <th>7. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Horn<br><img src="images/CS428Proj2Images/horn.PNG"></th>
+                    <th>Yes</th>
+                    <th>8. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Candy<br><img src="images/CS428Proj2Images/candy.PNG"></th>
+                    <th>Yes</th>
+                    <th>2. Produce new Objects</th>
+                </tr>
+                <tr>
+                    <th>Clown Shoes<br><img src="images/CS428Proj2Images/clownShoes.PNG"></th>
+                    <th>Yes</th>
+                    <th>9. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Cardboard Clown<br><img src="images/CS428Proj2Images/Cardboard.PNG"></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>Water Gun<br><img src="images/CS428Proj2Images/watergun.PNG"></th>
+                    <th>Yes</th>
+                    <th>3. Produce new object</th>
+                </tr>
+                <tr>
+                    <th>Microwave<br><img src="images/CS428Proj2Images/microwave.PNG"></th>
+                    <th>Yes</th>
+                    <th>2. Animated/movable part</th>
+                </tr>
+                <tr>
+                    <th>Pie<br><img src="images/CS428Proj2Images/pie.PNG"></th>
+                    <th>Yes</th>
+                    <th>3. Produce new Objects</th>
+                </tr>
+                <tr>
+                    <th>Juggling Pin<br><img src="images/CS428Proj2Images/pins.PNG"></th>
+                    <th>Yes</th>
+                    <th>10. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Unicycle<br><img src="images/CS428Proj2Images/unicycle.PNG"></th>
+                    <th>Yes</th>
+                    <th>11. grabbable / droppable / tossable</th>
+                </tr>
+                <tr>
+                    <th>Volkswagon Clown Car<br><img src="images/CS428Proj2Images/car.PNG"></th>
+                    <th>Yes</th>
+                    <th>3. Animated/movable part</th>
+                </tr>
+                <tr>
+                    <th>Carpet Texture<br><img src="images/CS428Proj2Images/carpet.PNG"></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+                <tr>
+                    <th>Ceiling Texture<br><img src="images/CS428Proj2Images/ceiling.PNG"></th>
+                    <th>No</th>
+                    <th>---</th>
+                </tr>
+            </table>
+            <h3>Video Demonstration</h3>
+            <h3>Discussion on viewing in the VR world</h3>
+        </div>
+        
+    <footer>
+        © 2020 Stas Kobylarz
+    </footer>
+    </div>
+
+
+
+
+    </div>
+</body>
+</html>
