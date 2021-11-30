@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/428projCSS.css" />
+    <link rel="stylesheet" href="css/hamburgerMenu.css" />
+
+</head>
+<body>
+    <div class="page">
+
+        <!--Menu Navigation-->
+        <div class="menu-wrapper">
+            <input type="checkbox" class="toggle"  />
+
+            <div class="hamburger">
+                <div class="bar"></div>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="CS428.html">CS428</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    <!--Content of about page-->
+    <div class="container">
+        <div class = "title">
+            <h1>CS 428</h1>
+            <h2>Project 3 - Perspective</h2>
+            <div class = githubLink><a target="_blank" rel="noopener noreferrer" href= "https://github.com/Stasioo/CS428-Project3">Github Link</a></div>
+        </div>
+        <div class = "mainContent">
+            <img src="images/CS428Proj2Images/thumbnail.PNG">
+            <h3>Introduction</h3>
+            <p>With this final project of CS428, we were tasked with creating 3 different versions of our project 2. These 3 different versions of our original project are done in the way of viewing the original office space from different perspectives. So while the core features of the office space remain the same, viewing the space is done differently. Starting off with the first version of the office space, we were to create a child's playset version of it, where the user can take the office space, open the roof, grab elements of the space, move it around, place new ones, and generally play around with it like a playset. Additional features with this version include a lamp you can use to shine over the playset and 2 new figures that the user can mess around with the scene.            </p>
+            <p>The second version of the space is to create a Land of the Giants version, where the user moves around the space as they would normally but they are scaled exactly 1 foot tall, resulting in everything being larger than the user.  Within this scene, I gave the user the ability to climb on certain objects such as the computer mouse that is found dangling in various parts of the office. Additional new props/objects were added such as a  phone, banana, mechanical pencil, eraser, etc that are scaled normally, allowing the user to pick it up and interact.            </p>
+            <p>The last version of the office space is a version of the space where the user can rotate the world 90-degree increments utilizing a menu, resulting in the walls becoming the floor and the ceiling becoming the walls, etc. Other objects such as props and furniture will result in physically falling around and placed in areas where they originally weren't. Within this space, I allowed the user to pick up things they would normally would and climb certain things when the room gets rotated such as the cubicles and the stairwell.            </p>
+            <p>On top of all the scenes, we were tasked with creating a spatial menu that the user can bring up whenever and allow the user to jump between the different versions of the office space as well as the original. </p>
+            <h3>How to build and run the app</h3>
+            <p>In order to build the app and run it properly, you are going to need several tools installed prior to building it.</p>
+            <p>This app requires the following (For VRTK, you don't actually have to install anything from the site):</p>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://unity3d.com/get-unity/download/archive">Unity v2019.4.28f1</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://unity3d.com/get-unity/download">Unity Hub</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://git-scm.com/">Git</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.vrtk.io/">VRTK 4</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.blender.org/">Blender 2.93.5</a></li>
+            <li>An Oculus Quest 1 or 2</a></li>
+
+            <p>Once you have all of the apps listed above installed, you can now follow these build instructions in order to build this app on your own personal computer:</p>
+            <ol>
+                <img src="images/CS428Proj2Images/instr1.PNG">
+                <li>Starting firstly, open up the GitHub repo link to the application, and either clone repo using git or download the zip file. If you are cloning the repository, utilize the command "git clone https://github.com/Stasioo/CS428Project2.git" in your command terminal in a folder that you would like to keep it. With the zip file, all you have to do is extract the contents to the desired folder.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr2.PNG">
+                <li>Once you have the project saved on your PC, the next step is to open up Unity Hub. If you do not have Unity V2019.4.28f1 installed, make sure you do that first by going to the Unity archive site and searching for that version, and installed it from there.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr3.PNG"><br>
+                <img src="images/CS428Proj2Images/instr3_.PNG">
+                <li>Once you have that version installed, the next step is to add the project to Unity Hub, which you can do by clicking on the "ADD" button found on the top right under the "Projects" tab. Look for the folder that has the contents of the application. Make sure you are inside the folder containing folders such as Assets, Library, obj, packages, etc. Once you have added it, it will appear in the "Projects" tab of Unity Hub.</li>
+                <p></p>
+                <img src="images/CS428Proj3Images/instr4.PNG">
+                <li>The next step is to open the project, and once you have done that, under the Project Tab found on the bottom left, look under the Assets/Scenes folder, and find the "PlaysetVersion.unity" scene file if that scene isn't currently opened up by default. Also double-check that you have the four necessary scenes within this folder: the "CeilingVersion.unity", the "GiantVersion.unity", the "PlaysetVersion.unity", and the "ScareCoOffices.unity" scene files.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr5.PNG">
+                <li>Now a couple of more checks are needed to make sure the build process will come cleanly. Firstly, we need to make sure Virtual Reality is supported by going under Edit -> Project Settings, it will bring up a new window,  and under the Player tab, and under Deprecated Settings that Virtual Reality Supported is ticked off and the Oculus SDK is shown. If not, tick it and press the plus sign to add the Oculus SDK.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr6-1.PNG"><br>
+                <img src="images/CS428Proj2Images/instr6-2.PNG">
+                <li> Additionally, you need to make sure you have necessary VRTK packages installed if they weren't in the first place. You can do this by going to your application folder and under the Packages folder and look for the manifest.json file. Opening it in a text editor, double-check to see if you have these lines:</li>
+                <br>"io.extendreality.tilia.mutators.collisionignorer.unity": "1.2.7",<br>
+                "io.extendreality.tilia.camerarigs.spatialsimulator.unity": "1.4.12",<br>
+                "io.extendreality.tilia.camerarigs.trackedalias.unity": "1.6.6",<br>
+                "io.extendreality.tilia.camerarigs.unityxr": "1.5.5",<br>
+                "io.extendreality.tilia.indicators.objectpointers.unity": "1.7.12",<br>
+                "io.extendreality.tilia.input.unityinputmanager": "1.4.5",<br>
+                "io.extendreality.tilia.interactions.controllables.unity": "1.13.0",<br>
+                "io.extendreality.tilia.interactions.interactables.unity": "1.20.1",<br>
+                "io.extendreality.tilia.interactions.spatialbuttons.unity": "1.3.11",<br>
+                "io.extendreality.tilia.locomotors.climbing.unity": "1.7.26",<br>
+                "io.extendreality.tilia.locomotors.teleporter.unity": "1.6.7",<br>
+                "io.extendreality.tilia.locomotors.teleporttargets.unity": "1.1.11",<br>
+                "io.extendreality.tilia.trackers.pseudobody.unity": "1.6.22"<br>
+            
+                If not, add whichever ones that you do not have.<br>
+                <p></p>
+                <img src="images/CS428Proj3Images/instr7.PNG"><br>
+                <img src="images/CS428Proj3Images/instr7-1.PNG">
+                <li>Additionally, make sure within your Unity Hierarchy, under VRsetup, that CameraRigs.UnityXR is enabled whilst the CameraRigs.SpatialSimulator is disabled. You have to do this for each of the four scenes, or else the app will not be able to run on an Oculus headset.</li>
+                <p></p>
+                <img src="images/CS428Proj3Images/instr8.PNG">
+                <li>Once you have done that, now you can go under the File -> Build Settings to make it. Under the Build Settings window, make sure you have Scenes/ScareCoOffices selected as the scene for the build. Set the Build Platform to be Android so you can deploy it on the Oculus Headset. Once you have switched to that platform. You can either choose to build or Build And Run. If you have the Oculus Quest headset connected via USB cable, it will show up in the list, and you may click on Build and Run.</li>
+                <p></p>
+                <img src="images/CS428Proj2Images/instr9-1.jpg"><br>
+                <img src="images/CS428Proj2Images/instr9-2.jpg">
+                <li>Once you have done that, which may take a while if it's the first time building on the Oculus Quest headset, you may disconnect the USB cable, and use the headset. Whilst using it, go on the application menu, and in the upper right of the big menu, click on all Applications, and at the bottom of the list click on the application to start it.</li>
+            </ol>
+            <h3>Assets</h3>
+            <table>
+                <tr>
+                    <th>Asset Name</th>
+                    <th>Source</th>
+                </tr>
+                <tr>
+                    <th>Banana<br><img src="images/CS428Proj3Images/banana.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/day-4-banana-088c1883e07e4946956488171e3a06bf">Link</a></th>
+                </tr>
+                <tr>
+                    <th>Motorola Phone<br><img src="images/CS428Proj3Images/phone.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/motorola-razr-cell-phone-15c2adf9af7a46fd8eb059ff053bec6a">Link</a></th>
+                </tr>
+                <tr>
+                    <th>Duck tape<br><img src="images/CS428Proj3Images/tape.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://www.turbosquid.com/3d-models/duct-tape-3d-model-1486518">Link</a></th>
+                </tr>
+                <tr>
+                    <th>Paper Clip<br><img src="images/CS428Proj3Images/pclip.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://www.turbosquid.com/3d-models/free-s-model-paper/686368">Link</a></th>
+                </tr>
+                <tr>
+                    <th>Eraser<br><img src="images/CS428Proj3Images/eraser.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/eraser-9ca345fea6b441b799f72bfe41e8ffbd">Link</a></th>
+                </tr>
+                <tr>
+                    <th>Laptop<br><img src="images/CS428Proj3Images/laptop.PNG"></th>
+                    <th>Made it myself in blender</th>
+                </tr>
+                <tr>
+                    <th>Neku<br><img src="images/CS428Proj3Images/neku.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://www.deviantart.com/g1og1o/art/Neku-Sakuraba-887428168">Link</a></th>
+                </tr>
+                <tr>
+                    <th>Among Us Astronaut<br><img src="images/CS428Proj3Images/among.PNG"></th>
+                    <th><a target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/among-us-428bb9a3637e458c8336e4a7aefd4e3d">Link</a></th>
+                </tr>
+                <tr>
+                    <th>Mechanical pencil<br><img src="images/CS428Proj3Images/pen.PNG"></th>
+                    <th>Made it myself in blender</th>
+                </tr>
+                <tr>
+                    <th>Dangling Mouse<br><img src="images/CS428Proj3Images/mouse.PNG"></th>
+                    <th>Made it myself in blender</th>
+                </tr>
+                <tr>
+                    <th>Binder<br><img src="images/CS428Proj3Images/binder.PNG"></th>
+                    <th>Made it myself in blender</th>
+                </tr>
+                <tr>
+                    <th>Book<br><img src="images/CS428Proj3Images/book.PNG"></th>
+                    <th>Made it myself in blender</th>
+                </tr>
+            </table>
+            <p></p>
+            <p>*Note: I did not list what assets fit the unique model requirement as there is more models that fit this requirement*</p>
+            <p>*Utilized Silent's Cel Shader for the Neku Outline shader*</p>
+            <h3>Video Demonstration</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/B02SNqAKfJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+    <footer>
+        © 2020 Stas Kobylarz
+    </footer>
+    </div>
+
+
+
+
+    </div>
+</body>
+</html>
